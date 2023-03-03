@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "server": "node api/index.js"
+    "server": "node api/index.js",
+	"lint": "eslint client"
   },
   "dependencies": {
     "eslint": "^8.35.0",
