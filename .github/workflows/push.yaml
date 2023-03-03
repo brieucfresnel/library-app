@@ -1,11 +1,11 @@
 name: "Lint on push"
+on: "push"
 jobs: 
   lint: 
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
-    - run : | 
-        cd client  
-        npm ci
-        npm run build
-        npm run lint
+    - name: Install modules
+      run: npm ci 
+    - name: Run ESLint
+      run: npm run lint
